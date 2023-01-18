@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="tw">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
-        function oAuth2() {
-            var URL = 'https://notify-bot.line.me/oauth/authorize?';
-            URL += 'response_type=code';
-            URL += '&client_id=1nNYltufPH3GnMNKCpyOCr';
-            URL += '&redirect_uri=https://mitchellhu.github.io/pages-demo/linecallback.html';
-            URL += '&scope=notify';
-            URL += '&state=NO_STATE';
-            window.location.href = URL;
-        }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Link Notify</title>
+  </head>
+  <body>
+    <button onclick="Auth();">點選這裡連結到LineNotify</button>
+
+    <script>
+      function Auth() {
+        var URL = "https://notify-bot.line.me/oauth/authorize?";
+        URL += "response_type=code";
+        URL += "&client_id=1nNYltufPH3GnMNKCpyOCr";
+        URL += "&redirect_uri=https://mitchellhu.github.io/pages-demo/linecallback.html";
+        URL += "&scope=notify";
+        URL += "&state=nostate";
+        window.location.href = URL;
+      }
     </script>
-    </head>
-    <body>
-        <button onclick="oAuth2();"> 連結到 LineNotify 按鈕 </button>
-    </body>
+  </body>
 </html>
